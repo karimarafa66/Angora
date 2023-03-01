@@ -1,0 +1,362 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: #282828;
+
+  line-height: 38px;
+}
+:root {
+  --maincolor: rgb(242, 84, 84);
+}
+.side-icon {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  top: 20%;
+  left: -1;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+.side-icon:hover {
+  background-color: rgba(41, 40, 40, 0.6);
+}
+.top-part p {
+  width: 75%;
+  margin: auto;
+}
+.top-part .title h3 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #aca9a998;
+  position: relative;
+}
+.top-part .title h3::after {
+  content: "";
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background-color: #282828;
+  transition: width 0.3s;
+}
+.top-part:hover .title h3::after {
+  width: 60px;
+}
+.top-part .title h2 {
+  color: #282828;
+  font-size: 38px;
+  font-weight: 700;
+  transform: translateY(-12%);
+}
+.top-part p {
+  font-size: 18px;
+}
+/* Home Section */
+.navbar .navbar-nav .nav-item {
+  padding-left: 15px;
+  line-height: 25px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: white;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: var(--maincolor);
+}
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: var(--maincolor);
+}
+
+.icons a i {
+  color: white;
+}
+.icons a i:hover {
+  color: var(--maincolor);
+}
+
+.navbar::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.256);
+  position: absolute;
+  bottom: 0px;
+}
+
+.carousel-caption h1 {
+  font-size: 70px;
+  font-weight: 700;
+  line-height: 70px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.home .carousel-control-next,
+.carousel-control-prev {
+  width: 45px;
+  height: 50px;
+  border: solid 2px white;
+  left: 0;
+  top: 38%;
+  transition-duration: 0.5s;
+}
+.home .carousel-control-next {
+  margin-top: 50px;
+}
+
+.home .carousel-control-next i,
+.carousel-control-prev i {
+  font-size: 20px;
+}
+.home .carousel-control-next:hover,
+.carousel-control-prev:hover {
+  color: white;
+}
+.home .carousel-control-next i:hover,
+.carousel-control-prev i:hover {
+  color: var(--maincolor);
+}
+
+/* About Section */
+.about .item2 p {
+  font-weight: 600;
+}
+.progress {
+  height: 5px;
+  overflow: visible;
+}
+.progress-bar {
+  position: relative;
+  overflow: visible;
+  background-color: #f25454;
+  box-shadow: 1px 1px 0;
+  box-shadow: 0px 0.2px 2px 0px rgba(0, 0, 0, 0.5);
+  height: 6px;
+}
+.bar1::after {
+  content: "80%";
+  position: absolute;
+  right: 0;
+  bottom: 230%;
+  color: black;
+}
+.bar2::after {
+  content: "95%";
+  position: absolute;
+  right: 0;
+  bottom: 230%;
+  color: black;
+}
+.bar3::after {
+  content: "85%";
+  position: absolute;
+  right: 0;
+  bottom: 230%;
+  color: black;
+}
+.bar4::after {
+  content: "70%";
+  position: absolute;
+  right: 0;
+  bottom: 230%;
+  color: black;
+}
+.about .progress .animateMe {
+  animation: progressbar 1.5s ease-out,
+    progress-bar-stripes 0.5s 1.5s linear infinite;
+}
+
+@keyframes progressbar {
+  0% {
+    width: 25%;
+  }
+}
+
+/* Team Section */
+.team .end-part .item .caption .overlay {
+  background-color: rgba(242, 84, 84, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 5%;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s, top 0.5s;
+}
+.team .end-part .item:hover .caption .overlay {
+  opacity: 1;
+  top: 0;
+}
+.team .end-part .item .caption img {
+  transition: transform 0.5s;
+}
+.team .end-part .item:hover .caption img {
+  transform: scale(1.2);
+}
+.team .icons a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.team .icons a:hover {
+  color: #09c;
+}
+
+.team .end-part .item h5 {
+  transition: color 0.5s;
+}
+.team .end-part .item:hover h5 {
+  color: var(--maincolor);
+}
+.team .end-part .ideas a {
+  font-weight: 600;
+  transition: background-color 0.5s;
+}
+.team .end-part .ideas a:hover {
+  background-color: #f25454c2;
+}
+.btn-pink{
+  background-color: var(--maincolor);
+}
+/* Project Section */
+/* Services Section */
+.services {
+  background-color: #fafafa;
+}
+.services .service {
+  transition: background-color 0.4s, box-shadow 0.4s;
+  box-shadow: 0rem 0.1rem 0.25rem rgba(0, 0, 0, 0.055);
+  padding: 12;
+  border-radius: 5px;
+}
+.services .service:hover {
+  background-color: #fff;
+  box-shadow: 0.15rem 0.2rem 0.25rem rgba(0, 0, 0, 0.065);
+}
+.services .end-part .service h3 {
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.4s;
+}
+.services .end-part .service:hover h3 {
+  color: var(--maincolor);
+}
+/* Blog Client Reviews Section */
+.carousel-indicators [data-bs-target] {
+  border-radius: 60%;
+  height: 95px;
+  width: 100px;
+  text-indent: 0;
+  overflow: hidden;
+}
+
+
+/* Contact Section */
+.contact {
+  background-color: #fafafa;
+}
+.contact .end-part .item i {
+  color: var(--maincolor);
+}
+.contact .end-part .item .caption h4 {
+  font-size: 20;
+  font-weight: 500;
+  transition: color 0.4s;
+}
+.contact .end-part .item:hover .caption h4 {
+  color: var(--maincolor);
+}
+.contact .end-part .caption a {
+  color: #666;
+  transition: color 0.3s;
+}
+.contact .end-part .caption a:hover {
+  color: var(--maincolor);
+}
+.contact form input {
+  height: 50px;
+}
+.contact form a {
+  font-weight: 600;
+  transition: background-color 0.4s;
+}
+.contact form a:hover {
+  background-color: #f25454c2;
+}
+.end {
+  background-color: #fafafa;
+}
+/* Footer */
+.links {
+  background: #222;
+  background-image: url(../images/World-Map-PNG-Photo1.png);
+  background-position: center center;
+  background-size: contain;
+}
+
+.links .caption h5 {
+  font-weight: 600;
+  color: white;
+}
+.links .caption p {
+  color: #b0b0b0;
+}
+.links .caption a {
+  text-decoration: none;
+  color: #b0b0b0;
+  transition: color 0.4s;
+}
+.links .caption a:hover {
+  color: var(--maincolor);
+}
+.links .but a {
+  border: 1px solid #b0b0b0;
+  transition: all 0.4s;
+}
+.links .but a:hover {
+  border-color: var(--maincolor);
+  color: var(--maincolor);
+}
+
+footer {
+  background-color: #1a1a1a;
+}
+footer .social-icons a {
+  font-size: 16;
+  transition: color 0.4s;
+  color: white;
+}
+footer .social-icons a:hover {
+  color: var(--maincolor);
+}
+
+footer .copy p {
+  color: #b0b0b0;
+}
+footer .copy a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.4s;
+  color: white;
+}
+footer .copy a:hover {
+  color: var(--maincolor);
+}
